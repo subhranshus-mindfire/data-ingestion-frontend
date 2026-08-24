@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { JobService } from '../api/client';
 
 export default function JobForm({ onJobCreated }) {
-  const [sourceUrl, setSourceUrl] = useState('http://localhost:8080/samples/stress-input.csv');
+  const [sourceUrl, setSourceUrl] = useState('https://data-processing-pipeline-go.onrender.com/samples/stress-input.csv');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -50,7 +50,7 @@ export default function JobForm({ onJobCreated }) {
           <input 
             type="url" 
             className="form-input" 
-            placeholder="http://..."
+            placeholder="https://data-processing-pipeline-go.onrender.com/samples/stress-input.csv"
             value={sourceUrl}
             onChange={(e) => setSourceUrl(e.target.value)}
           />
